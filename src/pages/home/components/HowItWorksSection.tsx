@@ -6,7 +6,7 @@ const steps = [
     title: 'Requirements & API Design',
     icon: 'ri-file-list-3-line',
     desc: 'I start by thoroughly understanding the system requirements — who the users are, what data flows exist, and what the API needs to do. I design clear API contracts, define endpoints, request/response schemas, and authentication strategies before writing code.',
-    duration: '1–3 Days',
+
     deliverable: 'API Contract & ERD Document',
   },
   {
@@ -14,7 +14,7 @@ const steps = [
     title: 'Database Schema Design',
     icon: 'ri-database-2-line',
     desc: 'With the API design confirmed, I design normalized database schemas with the right relationships and indexes. I choose the right database for the job — MySQL/PostgreSQL for relational data, MongoDB for document-based models, Redis for caching layers.',
-    duration: '1–2 Days',
+    
     deliverable: 'Schema Migrations & Seed Scripts',
   },
   {
@@ -22,7 +22,7 @@ const steps = [
     title: 'Implementation & Integration',
     icon: 'ri-code-s-slash-line',
     desc: 'I build the API layer in TypeScript with Node.js and Express — implementing business logic, JWT authentication, role-based access control, input validation, Redis caching, and BullMQ background jobs. Every module is clean, typed, and follows consistent patterns.',
-    duration: '3–10 Days',
+   
     deliverable: 'Fully Functional REST API',
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     title: 'Testing & Deployment',
     icon: 'ri-test-tube-line',
     desc: 'No code ships without tests. I write unit and integration tests using Jest and Supertest, covering critical paths, edge cases, and auth flows. The service is then containerized with Docker and deployed with confidence, with logs and error monitoring in place.',
-    duration: '1–3 Days',
+    
     deliverable: 'Tested, Dockerized & Deployed API',
   },
 ];
@@ -113,7 +113,6 @@ const HowItWorksSection = () => {
                   <div className="flex gap-4 sm:gap-6 flex-col sm:flex-row">
                     <div className="bg-beige rounded-xl px-5 sm:px-6 py-3 sm:py-4">
                       <p className="text-xs text-warmgray font-sans uppercase tracking-widest mb-1">Duration</p>
-                      <p className="font-serif text-charcoal font-semibold text-sm sm:text-base">{step.duration}</p>
                     </div>
                     <div className="bg-beige rounded-xl px-5 sm:px-6 py-3 sm:py-4 flex-1">
                       <p className="text-xs text-warmgray font-sans uppercase tracking-widest mb-1">Deliverable</p>
