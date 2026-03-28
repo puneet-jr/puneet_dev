@@ -66,7 +66,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="/RESUME.pdf"
+            href={`${__BASE_PATH__}RESUME.pdf`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 border border-terracotta text-terracotta text-sm font-medium px-5 py-2 rounded-full cursor-pointer whitespace-nowrap transition-all duration-300 hover:bg-terracotta hover:text-white"
@@ -111,7 +111,7 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href="/RESUME.pdf"
+                href={`${__BASE_PATH__}RESUME.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-sm font-medium text-warmgray cursor-pointer whitespace-nowrap hover:text-terracotta transition-colors"
