@@ -47,7 +47,7 @@ const skills = [
 
 const KeyFeaturesSection = () => {
   const [visible, setVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

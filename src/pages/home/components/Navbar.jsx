@@ -19,7 +19,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e, href) => {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {

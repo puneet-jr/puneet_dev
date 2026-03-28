@@ -1,10 +1,10 @@
 const HeroSection = () => {
-  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScrollToContact = (e) => {
     e.preventDefault();
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleScrollToWork = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScrollToWork = (e) => {
     e.preventDefault();
     document.querySelector('#purpose')?.scrollIntoView({ behavior: 'smooth' });
   };

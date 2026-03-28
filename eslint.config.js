@@ -2,7 +2,6 @@ import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
 import routeElementPlugin from './eslint-rules/route-element-jsx.js'
 
 const autoImportGlobals = {
@@ -48,16 +47,19 @@ const autoImportGlobals = {
 export default [
   { ignores: ['dist', 'node_modules'] },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
-    files: ['src/**/*.{ts,tsx}'],
+    files: ['src/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        sourceType: 'module',
+      },
       globals: {
         ...globals.browser,
         ...autoImportGlobals,
-        NodeJS: 'readonly',
-        JSX: 'readonly',
         IdleRequestCallback: 'readonly',
         __BASE_PATH__: 'readonly',
         __IS_PREVIEW__: 'readonly',
@@ -76,9 +78,6 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-namespace': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
       'no-unused-vars': 'off',
       'no-useless-escape': 'off',
       'prefer-const': 'off',
@@ -86,7 +85,6 @@ export default [
       'prefer-spread': 'off',
       'no-unused-expressions': 'off',
       'no-case-declarations': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
       'no-useless-catch': 'off',
       'no-irregular-whitespace': 'off',
       'no-undef': 'error',
@@ -94,7 +92,7 @@ export default [
   },
   // Only enforce this rule for the router config file to avoid false positives elsewhere.
   {
-    files: ['src/router/config.tsx'],
+    files: ['src/router/config.jsx'],
     plugins: {
       'local-route': routeElementPlugin,
     },
@@ -103,4 +101,3 @@ export default [
     },
   },
 ]
-

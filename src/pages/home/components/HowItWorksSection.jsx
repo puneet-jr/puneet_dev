@@ -38,7 +38,7 @@ const steps = [
 const HowItWorksSection = () => {
   const [visible, setVisible] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
