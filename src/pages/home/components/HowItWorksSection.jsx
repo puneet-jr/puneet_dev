@@ -111,9 +111,6 @@ const HowItWorksSection = () => {
                   <p className="text-warmgray text-sm sm:text-base font-sans leading-relaxed mb-6 sm:mb-8">{step.desc}</p>
 
                   <div className="flex gap-4 sm:gap-6 flex-col sm:flex-row">
-                    <div className="bg-beige rounded-xl px-5 sm:px-6 py-3 sm:py-4">
-                      <p className="text-xs text-warmgray font-sans uppercase tracking-widest mb-1">Duration</p>
-                    </div>
                     <div className="bg-beige rounded-xl px-5 sm:px-6 py-3 sm:py-4 flex-1">
                       <p className="text-xs text-warmgray font-sans uppercase tracking-widest mb-1">Deliverable</p>
                       <p className="font-serif text-charcoal font-semibold text-sm">{step.deliverable}</p>

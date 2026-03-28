@@ -7,9 +7,9 @@ const FooterSection = () => {
   const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'Purpose', href: '#purpose' },
-    { label: 'Key Features', href: '#key-features' },
+    { label: 'Tech Stack', href: '#key-features' },
     { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Benefits', href: '#benefits' },
+    { label: 'What I Offer', href: '#benefits' },
     { label: 'Contact', href: '#contact' },
   ];
 

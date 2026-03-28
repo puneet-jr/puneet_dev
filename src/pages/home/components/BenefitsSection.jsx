@@ -61,7 +61,7 @@ const BenefitsSection = () => {
           <div className={`text-center mb-12 sm:mb-20 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="text-terracotta text-xs font-medium tracking-[3px] uppercase font-sans mb-4">Why Work With Me</p>
             <h2 className="font-serif text-white text-3xl sm:text-5xl font-bold leading-tight">
-              Benefits That <span className="italic text-terracotta">Matter</span>
+              What I <span className="italic text-terracotta">Offer</span>
             </h2>
             <p className="text-white/50 text-sm sm:text-base font-sans mt-4 sm:mt-5 max-w-lg mx-auto leading-relaxed">
               Beyond writing code — delivering backend systems that are secure, tested, and built to last.

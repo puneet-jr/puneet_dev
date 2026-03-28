@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Purpose', href: '#purpose' },
-  { label: 'Key Features', href: '#key-features' },
+  { label: 'Tech Stack', href: '#key-features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Benefits', href: '#benefits' },
+  { label: 'What I Offer', href: '#benefits' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -64,13 +64,23 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Button */}
-        <a
-          href="#contact"
-          onClick={(e) => handleNavClick(e, '#contact')}
-          className="hidden md:inline-flex items-center gap-2 bg-terracotta text-white text-sm font-medium px-5 py-2 rounded-full cursor-pointer whitespace-nowrap transition-all duration-300 hover:bg-[#b5603e]"
-        >
-          Hire Me
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="/RESUME.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 border border-terracotta text-terracotta text-sm font-medium px-5 py-2 rounded-full cursor-pointer whitespace-nowrap transition-all duration-300 hover:bg-terracotta hover:text-white"
+          >
+            Resume
+          </a>
+          <a
+            href="#contact"
+            onClick={(e) => handleNavClick(e, '#contact')}
+            className="inline-flex items-center gap-2 bg-terracotta text-white text-sm font-medium px-5 py-2 rounded-full cursor-pointer whitespace-nowrap transition-all duration-300 hover:bg-[#b5603e]"
+          >
+            Hire Me
+          </a>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -99,6 +109,16 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/RESUME.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-warmgray cursor-pointer whitespace-nowrap hover:text-terracotta transition-colors"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       )}
